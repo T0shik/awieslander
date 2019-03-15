@@ -21,10 +21,20 @@ var stacks = {
       'Modern progressive javascript framework for frontend development.',
     link: 'https://vuejs.org/'
   },
+  bootstrapV3: {
+    name: 'Bootstarp 3',
+    description: 'Modern CSS Framework by twitter, v3.*',
+    link: 'https://getbootstrap.com/'
+  },
+  bootstrapV4: {
+    name: 'Bootstrap 4',
+    description: 'Modern CSS Framework by twitter, v4.*',
+    link: 'https://getbootstrap.com/'
+  },
   bulma: {
     name: 'Bulma',
     description: 'Modern CSS Framework based on flexbox.',
-    link: 'https://bulma.io/documentation/'
+    link: 'https://bulma.io/'
   },
   ionicA: {
     name: 'Ionic + Angular',
@@ -73,15 +83,35 @@ var stacks = {
     description:
       'An all-in-one workflow that combines global deployment, continuous integration, and automatic HTTPS. And that’s just the beginning.',
     link: 'https://www.netlify.com/'
+  },
+  sass: {
+    name: 'sass',
+    description: 'CSS pre-processor',
+    link: 'https://sass-lang.com/'
+  },
+  stylus: {
+    name: 'stylus',
+    description: 'CSS pre-processor',
+    link: 'http://stylus-lang.com'
   }
+}
+
+var features = {
+  blog: {
+    name: 'Blog'
+  },
+  shop: {},
+  admin: {},
+  comments: {},
 }
 
 export const projects = [
   {
     title: 'Tricking Royal',
-    description: 'Social network for participating and competing in tricking battles',
+    description:
+      'Social network for participating and competing in tricking battles',
     link: 'https://www.trickingroyal.com',
-    longDescription: ['Paragraph 1', 'PAragraph 2'],
+    longDescription: ['Paragraph 1', 'Paragraph 2'],
     scoial: [
       { icon: 'fab fa-facebook', link: '' },
       { icon: 'fab fa-instagram', link: '' },

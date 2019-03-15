@@ -3,7 +3,7 @@
     <v-card class="mb-3" v-for="p in projects" :key="p.title" max-width="600px" width="100%">
       <v-card-title primary-title>
         <div>
-          <h3 class="headline mb-0" >{{p.title}}</h3>
+          <h3 class="headline mb-0">{{p.title}}</h3>
           <div>{{p.description}}</div>
           <a class="markdown--link" flat :href="p.link" target="_blank">
             {{p.link}}
@@ -24,10 +24,11 @@
           >
             <template v-slot:activator="{ on }">
               <v-chip
-                dark
                 v-on="on"
                 :class="{'green': s.active, 'error': !s.active, 'text-crossout': !s.active}"
-              >{{s.name}}</v-chip>
+              >
+                <span>{{s.name}}</span>
+              </v-chip>
             </template>
 
             <v-card :color="(!s.active ? 'error' : '')" max-width="400">
@@ -45,8 +46,8 @@
           </v-menu>
         </div>
       </v-card-text>
-      <v-card-actions>
-        <v-btn flat color="primary">read more</v-btn>
+      <v-card-actions class="justify-center" >
+        <v-btn>read more</v-btn>
       </v-card-actions>
     </v-card>
   </v-layout>
@@ -64,7 +65,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .text-crossout {
   text-decoration: line-through;
 }

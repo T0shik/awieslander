@@ -13,7 +13,7 @@
             <h1 class="display-1 font-weight-bold">Web Development</h1>
             <h1 class="display-1 font-weight-bold">& Mobile Apps</h1>
             <v-divider></v-divider>
-            <h1 class="title text-xs-right">by Anton Wieslander</h1>
+            <h1 class="title text-xs-right">by Anton Wieslander, {{data[0]}} - {{data[1]}}</h1>
           </div>
         </v-layout>
       </v-container>
@@ -28,10 +28,19 @@ export default {
     windowSize: {
       x: 0,
       y: 0
-    }
+    },
+    data: []
   }),
   mounted() {
     this.onResize()
+
+    fetch('http://aw-api.azurewebsites.net/api/values')
+      .then(res => {
+        return res.json()
+      })
+      .then(data => {
+        this.data = data
+      })
   },
   methods: {
     onResize() {

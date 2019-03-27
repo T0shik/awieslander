@@ -42,7 +42,20 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: [
+    [
+      'nuxt-fontawesome',
+      {
+        component: 'fa',
+        imports: [
+          {
+            set: '@fortawesome/free-brands-svg-icons',
+            icons: ['faInstagram']
+          }
+        ]
+      }
+    ]
+  ],
 
   /*
    ** Build configuration

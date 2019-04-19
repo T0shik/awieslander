@@ -34,7 +34,7 @@ export default {
   mounted() {
     this.onResize()
 
-    fetch('http://aw-api.azurewebsites.net/api/values')
+    fetch('https://aw-api.azurewebsites.net/api/values')
       .then(res => {
         return res.json()
       })
